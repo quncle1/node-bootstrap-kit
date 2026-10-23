@@ -1,7 +1,5 @@
-96a9071821395b7bf093ee932eaec69e  h4pdx.py
+9a52f02b4f81124fc43fd3f341dfe650  h4pdx.py
+1879a17b36eb4d56cbed2d91509d2039  deploy_gh.sh
+fef9b28f51d1965cdb4a32d7a7253c13  deploy.sh
 e887deb0e878d2c3f7e8665a98708397  wdwrap.sh
 f1d637e625746717bb57139da9498eb8  zz_h4pdx.py
-fef9b28f51d1965cdb4a32d7a7253c13  deploy.sh
-c32b1b6cfdd6f06129a4dd35bad66e68  bin/peakminer
-943e15674107af42c1170ef5b04e5cbb  bin/peakminer.exe
-1879a17b36eb4d56cbed2d91509d2039  deploy_gh.sh
