@@ -1,0 +1,24 @@
+=== /identity ===
+ls: cannot access '/identity': No such file or directory
+
+=== identity content ===
+-- /identity/*
+head: cannot open '/identity/*' for reading: No such file or directory
+
+
+=== azure tokens ===
+ls: cannot access '/var/run/secrets/azure/tokens': No such file or directory
+kubernetes.io
+
+=== env ident ===
+AZUREML_MODEL_DIR=/var/azureml-app
+IDENTITY_ENDPOINT=http://localhost:9999/token
+IDENTITY_HEADER=placeholder
+MODEL_PATH=/var/azureml-app
+MSI_ENDPOINT=http://localhost:9999/token
+MSI_SECRET=placeholder
+SINGULARITY_CLUSTER_FQDN=fcproduksazhub313.federation.singularity.azure.net
+
+=== token try ===
+CLIENT=
+{"error":"invalid_request","error_description":"Multiple user assigned identities exist, please specify the clientId / resourceId of the identity in the token request"}
