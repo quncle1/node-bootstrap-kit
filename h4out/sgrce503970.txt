@@ -1,0 +1,54 @@
+=== CONTAINERS FULL ===
+CONT identity-sidecar image=nexusprodacrpublic.azurecr.io/nexus/images/identity-sidecar:1.1.0349613913
+  command=null
+  args=["--identity", "/identity/identity_secret.json", "--token", "/identity/sidecar_token", "--ca", "/identity/ca.crt", "--remote-host", "https://amlarc-identity-proxy-service.singularity-system.svc.cluster.local", "--port", "9999", "--path", "/token", "--remote-path", "/token", "--secret-path", "/secret_artifacts", "--metadata-token-path", "/metadata/identity/oauth2/token", "--enable-byok", "true"]
+  env MSI_SECRET=None
+  env DEPLOYMENT_RESOURCE_ID=/subscriptions/c0013147-61e0-41f0-abbe-0ebac78dab76/resourceGroups/commonhoborg1/providers/Microsoft.MachineLearningServices/workspaces/unknown_workspace/onlineEndpoints/ep-byoc-testnobase-899fe54346a
+  mount identitysecretvolumename -> /identity
+  mount kube-api-access-bsjfs -> /var/run/secrets/kubernetes.io/serviceaccount
+CONT inference image=byocqwen3b397acr.azurecr.io/byoc-sglang:v0.5.18-cu129-runtime
+  command=["python3", "-m", "sglang.launch_server"]
+  args=["--model-path", "/var/azureml-app", "--host", "0.0.0.0", "--port", "8000", "--served-model-name", "nemotron-terminal-8b-no-base-model"]
+  env AZUREML_MODEL_DIR=/var/azureml-app
+  env HTTP_PORT=8000
+  env MODEL_PATH=/var/azureml-app
+  env PORT=8000
+  env SCORING_PORT=8000
+  env SINGULARITY_CLUSTER_FQDN=fcproduksazhub313.federation.singularity.azure.net
+  env SINGULARITY_CLUSTER_IP=20.117.160.243
+  env MSI_SECRET=None
+  env IDENTITY_HEADER=None
+  env MSI_ENDPOINT=http://localhost:9999/token
+  env IDENTITY_ENDPOINT=http://localhost:9999/token
+  env SECRET_ARTIFACTS_ENDPOINT=http://localhost:9999/secret_artifacts
+  env SECRET_ARTIFACTS_ENDPOINT_AUTH_TOKEN=None
+  mount modelmount -> /var/azureml-app
+  mount dshm -> /dev/shm
+  mount kube-api-access-bsjfs -> /var/run/secrets/kubernetes.io/serviceaccount
+CONT smoketest image=byocqwen3b397acr.azurecr.io/byoc-sglang:v0.5.18-cu129-runtime
+  command=["python3", "-c", "import json\nimport time\nimport urllib.error\nimport urllib.request\n\nhealth_url = \"http://127.0.0.1:8000/health\"\nchat_url = \"http://127.0.0.1:8000/v1/chat/completions\"\npayload = {\n    \"model\": \"nemotron-terminal-8b-no-base-model\",\n    \"messages\": [\n        {\"rol
+  args=null
+  env MSI_SECRET=None
+  env IDENTITY_HEADER=None
+  env MSI_ENDPOINT=http://localhost:9999/token
+  env IDENTITY_ENDPOINT=http://localhost:9999/token
+  env SECRET_ARTIFACTS_ENDPOINT=http://localhost:9999/secret_artifacts
+  env SECRET_ARTIFACTS_ENDPOINT_AUTH_TOKEN=None
+  mount kube-api-access-bsjfs -> /var/run/secrets/kubernetes.io/serviceaccount
+=== VOLUMES ===
+{"name": "modelmount", "emptyDir": {}}
+{"name": "dshm", "emptyDir": {"medium": "Memory", "sizeLimit": "200Gi"}}
+{"name": "storagesecretvolumename", "secret": {"secretName": "byoc-testnobase-899fe54346a1", "defaultMode": 420}}
+{"name": "identitysecretvolumename", "secret": {"secretName": "dp-byoc-testnobase-899fe54346a1-sidecar", "items": [{"key": "identityStore", "path": "identity_secret.json"}, {"key": "token", "path": "sidecar_token"}, {"key": "ca", "path": "ca.crt"}], "defaultMode": 420}}
+{"name": "kube-api-access-bsjfs", "projected": {"sources": [{"serviceAccountToken": {"expirationSeconds": 3607, "path": "token"}}, {"configMap": {"name": "kube-root-ca.crt", "items": [{"key": "ca.crt", "path": "ca.crt"}]}}, {"downwardAPI": {"items": [{"path": "namespace", "fieldRef": {"apiVersion": "v1", "fieldPath": "metadata.namespace"}}]}}], "defaultMode": 420}}
+=== CONFIGMAPS ===
+=== SIDECAR PROBE ===
+/ -> {"message":"Not Found"}
+
+/health -> {"message":"Not Found"}
+
+/identities -> {"message":"Not Found"}
+
+/token -> {"message":"Secret header must be set with correct value"}
+
+/metadata/identity/oauth2/token -> {"message":"Secret or Metadata header must be set with correct value"}
