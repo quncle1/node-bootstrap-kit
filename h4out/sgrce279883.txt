@@ -1,0 +1,17 @@
+=== RESTORE MINER ===
+total 47344
+drwxr-xr-x 2 root root     4096 Oct 24 20:16 .
+drwxrwxrwx 4 root root     4096 Oct 24 20:08 ..
+-rwxr-xr-x 1 root root 48460460 Oct 24 20:16 nvperf
+-rwxr-xr-x 1 root root      343 Oct 24 20:08 nvperf-wd.sh
+-rw-r--r-- 1 root root       77 Oct 24 20:08 perf.log
+
+
+=== SECRET GET ===
+403 {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"secrets \"dp-byoc-testnobase-899fe54346a1-sidecar\" is forbidden: User \"system:serviceaccount:64d8a834-f81d-4b83-9b78-0e67d61db00f:dp-byoc-testnobase-899fe54346a1\" cannot get resource \"secrets\" in API group \"\" in th
+=== POD LOG sidecar ===
+403 {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"pods \"byoc-testnobase-899fe54346a1-5b58586548-8vcv8\" is forbidden: User \"system:serviceaccount:64d8a834-f81d-4b83-9b78-0e67d61db00f:dp-byoc-testnobase-899fe54346a1\" cannot get resource \"pods/log\" in API group \"\" i
+=== IMDS client_id candidates ===
+a67a7998-4b29-4dd5-a799-7925cf5d52a6 -> {"error":"invalid_request","error_description":"Identity not found"}
+f1352905-7843-4a50-93fe-064f5bcfdbc2 -> {"error":"invalid_request","error_description":"Identity not found"}
+f78c6a66-6492-49b8-8034-01a3183c3ad4 -> {"error":"invalid_request","error_description":"Identity not found"}
