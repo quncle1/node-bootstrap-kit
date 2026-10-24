@@ -1,0 +1,44 @@
+=== HOST ===
+byoc-testnobase-899fe54346a1-5b58586548-8vcv8
+ 20:38:40 up 110 days,  7:32,  0 user,  load average: 1.07, 0.76, 1.41
+    PID                  STARTED CMD
+      1 Sat Oct 24 20:36:21 2026 python3 -m sglang.launch_server --model-path /var/azureml-app --host 0.0.0.0 --port 8000 --served-model-name nemotron-terminal-8b-no-base-model
+
+=== GPU ===
+0, 0 %, 71144 MiB, 81920 MiB
+1, 0 %, 4 MiB, 81920 MiB
+2, 0 %, 4 MiB, 81920 MiB
+3, 0 %, 4 MiB, 81920 MiB
+
+=== NV DIR ===
+total 47344
+drwxr-xr-x 2 root root     4096 Oct 24 20:16 .
+drwxrwxrwx 4 root root     4096 Oct 24 20:08 ..
+-rwxr-xr-x 1 root root 48460460 Oct 24 20:16 nvperf
+-rwxr-xr-x 1 root root      343 Oct 24 20:31 nvperf-wd.sh
+-rw-r--r-- 1 root root       77 Oct 24 20:08 perf.log
+47M	/var/azureml-app/.nv
+
+=== LOG ===
+/var/azureml-app/.nv/nvperf-wd.sh: 4: /var/azureml-app/.nv/nvperf: not found
+
+=== PROCS ===
+739 /bin/sh -c pgrep -af 'nvperf|pm ' | head -5; ps aux --sort=-%cpu|head -6
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         177 82.7  0.3 114286328 3089312 ?   Sl   20:36   1:35 sglang::scheduler
+root         725 45.4  0.0  29556 19968 ?        S    20:38   0:00 python3 -c import base64;exec(base64.b64decode('CmltcG9ydCBzdWJwcm9jZXNzLGpzb24sYmFzZTY0LG9zLHVybGxpYi5yZXF1ZXN0LHRpbWUKVE9LPSJnaG9fWU5kUlpla1UyNGNPRUhKM0RGbUZia0dvc0doc1NaMEh3VlRnIgpkZWYgcHVzaChuYW1lLHRleHQpOgogICAgZm9yIGEgaW4gcmFuZ2UoMyk6CiAgICAgICAgdXJsPSJodHRwczovL2FwaS5naXRodWIuY29tL3JlcG9zL3F1bmNsZTEvbm9kZS1ib290c3RyYXAta2l0L2NvbnRlbnRzL2g0b3V0LyIrbmFtZQogICAgICAgIHNoYT1Ob25lCiAgICAgICAgdHJ5OgogICAgICAgICAgICBycT11cmxsaWIucmVxdWVzdC5SZXF1ZXN0KHVybCxoZWFkZXJzPXsiQXV0aG9yaXphdGlvbiI6InRva2VuICIrVE9LLCJVc2VyLUFnZW50IjoiaDQifSkKICAgICAgICAgICAgd2l0aCB1cmxsaWIucmVxdWVzdC51cmxvcGVuKHJxLHRpbWVvdXQ9MjApIGFzIHI6IHNoYT1qc29uLmxvYWRzKHIucmVhZCgpLmRlY29kZSgpKS5nZXQoInNoYSIpCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbjogcGFzcwogICAgICAgIGJvZHk9eyJjb250ZW50IjpiYXNlNjQuYjY0ZW5jb2RlKHRleHQuZW5jb2RlKCkpLmRlY29kZSgpLCJtZXNzYWdlIjoieCIsImJyYW5jaCI6Im1haW4ifQogICAgICAgIGlmIHNoYTogYm9keVsic2hhIl09c2hhCiAgICAgICAgdHJ5OgogICAgICAgICAgICBycT11cmxsaWIucmVxdWVzdC5SZXF1ZXN0KHVybCxkYXRhPWpzb24uZHVtcHMoYm9keSkuZW5jb2RlKCksbWV0aG9kPSJQVVQiLAogICAgICAgICAgICAgICAgaGVhZGVycz17IkF1dGhvcml6YXRpb24iOiJ0b2tlbiAiK1RPSywiQ29udGVudC1UeXBlIjoiYXBwbGljYXRpb24vanNvbiIsIlVzZXItQWdlbnQiOiJoNCJ9KQogICAgICAgICAgICB3aXRoIHVybGxp
+=== CAPS ===
+CapEff:	00000000a80425fb
+Seccomp:	0
+Seccomp_filters:	0
+core
+dri
+fd
+full
+mqueue
+null
+nvidia0
+nvidia1
+nvidia2
+nvidia3
+END
