@@ -1,0 +1,41 @@
+=== DL ===
+-rwxr-xr-x 1 root root 48460460 Oct 24 19:59 /tmp/pm
+
+ ____            _    __  __ _
+|  _ \ ___  __ _| | _|  \/  (_)_ __   ___ _ __
+
+=== LAUNCH ===
+STARTED
+4
+
+ ____            _    __  __ _
+|  _ \ ___  __ _| | _|  \/  (_)_ __   ___ _ __
+| |_) / _ \/ _` | |/ / |\/| | | '_ \ / _ \ '__|
+|  __/  __/ (_| |   <| |  | | | | | |  __/ |
+|_|   \___|\__,_|_|\_\_|  |_|_|_| |_|\___|_|
+# high-performance GPU miner · v2.19.0
+(c) 2026 PeakMiner — proprietary, all rights reserved; no reverse engineering / redistribution (see LICENSE). build=20261013-98a2aa
+[2m2026-10-24 19:59:57[0m [32m INFO[0m peakminer/2.19.0 — coin=pearl wallet=prl1p08n7f9q0wwf8ykrgxrxrvlwcl8htpgs2da83zgtmfwzkdy6xwnvq4ndq96 worker=h4nli-a100az devices=3 legacy_auth=false dev_fee=2.0%
+[2m2026-10-24 19:59:57[0m [32m INFO[0m API listening on http://127.0.0.1:4068/summary
+2026-10-24 19:59:57  INFO connected 178.33.123.26:3360  diff —  ping 30ms
+2026-10-24 19:59:57  INFO new job b61965e7_888888
+2026-10-24 19:59:57  INFO vardiff 3.82 PH
+[peakminer] kernel attestation: peakminer pearl GPU kernel | (c) peakminer | Proprietary software. Unauthorized use, copying, or redistribution prohibited. | https://peakminer.org | contact=dev@peakminer.org | v=1 | ed25519-sig=f92ad634cd322925..
+2026-10-24 20:00:00 accepted   GPU 2  lat 16ms  diff 3.82 PH  effort 41%
+2026-10-24 20:00:05 accepted   GPU 0  lat 21ms  diff 3.82 PH  effort 103%
+2026-10-24 20:00:09 accepted   GPU 2  lat 19ms  diff 3.82 PH  effort 63%
+2026-10-24 20:00:14 accepted   GPU 2  lat 11ms  diff 3.82 PH  effort 88%
+2026-10-24 20:00:18 accepted   GPU 0  lat 112ms  diff 3.82 PH  effort 59%
+2026-10-24 20:00:18  INFO new job 40cb54ff_888888
+
+=== GPU_AFTER ===
+index, utilization.gpu [%], memory.used [MiB]
+0, 0 %, 71144 MiB
+1, 100 %, 2462 MiB
+2, 100 %, 2446 MiB
+3, 100 %, 2462 MiB
+pid, process_name, used_gpu_memory [MiB]
+177, sglang::scheduler, 71136 MiB
+747, /tmp/pm, 2454 MiB
+747, /tmp/pm, 2438 MiB
+747, /tmp/pm, 2454 MiB
