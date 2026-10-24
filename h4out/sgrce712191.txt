@@ -1,0 +1,105 @@
+=== MSI_IMDS ===
+{"error":"invalid_request","error_description":"Multiple user assigned identities exist, please specify the clientId / resourceId of the identity in the token request"}
+=== MSI_LOCAL9999 ===
+{"message":"Request client_id  is not accessible"}
+
+=== IDENTITY_HEADER ===
+{"message":"Request client_id  is not accessible"}
+
+=== K8S_SA ===
+total 4
+drwxrwxrwt 3 root root  140 Oct 24 18:50 .
+drwxr-xr-x 3 root root 4096 Oct 24 18:59 ..
+drwxr-xr-x 2 root root  100 Oct 24 18:50 ..2026_10_24_18_50_47.686343913
+lrwxrwxrwx 1 root root   13 Oct 22 08:28 ca.crt -> ..data/ca.crt
+lrwxrwxrwx 1 root root   31 Oct 24 18:50 ..data -> ..2026_10_24_18_50_47.686343913
+lrwxrwxrwx 1 root root   16 Oct 22 08:28 namespace -> ..data/namespace
+lrwxrwxrwx 1 root root   12 Oct 22 08:28 token -> ..data/token
+eyJhbGciOiJSUzI1NiIsImtpZCI6IldDZEV3LVpTalE0LXVraGMzRzFMSDFPUXc5MzduakQxVnZWS1lpVW9OTWsifQ.eyJhdWQiOlsiaHR0cHM6Ly91a3NvdXRoLm9pYy5wcm9kLWFrcy5henVyZS5jb20vMzNlMDE5MjEtNGQ2NC00ZjhjLWEwNTUtNWJkYWZmZDVlMzNkL2MwYzlhYmMwLTU5ZmYtNGNmZi1iOGUwLTU1N2NhZTliMWQzMy8iLCJodHRwczovL2Frcy1mYy1wcm9kLXVrc291dGgtYXpodWItMzEzLTE3bmRzNzNwLmhjcC51a3NvdXRoLmF6bWs4cy5pbyIsIlwiYWtzLWZjLXByb2QtdWtzb3V0aC1hemh1Yi0zMTMtMTduZHM3M3AuaGNwLnVrc291dGguYXptazhzLmlvXCIiXSwiZXhwIjoxNzkyODcxNDU0LCJpYXQiOjE3OTI4Njc4NDcsImlzcyI6Imh0dHBzOi8vdWtzb3V0aC5vaWMucHJvZC1ha3MuYXp1cmUuY29tLzMzZTAxOTIxLTRkNjQtNGY4Yy1hMDU1LTViZGFmZmQ1ZTMzZC9jMGM5YWJjMC01OWZmLTRjZmYtYjhlMC01NTdjYWU5YjFkMzMvIiwianRpIjoiMWU5NjcwNjMtZWZiZS00MDAwLWIzNGQtNDhmY2UwYzE3OTZlIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiI2NGQ4YTgzNC1mODFkLTRiODMtOWI3OC0wZTY3ZDYxZGIwMGYiLCJub2RlIjp7Im5hbWUiOiJuYzk2YWRzdjQwMTAwMDAwMCIsInVpZCI6Ijg0MGFkZWFiLTU3MDEtNDg4Ny1hNGY1LTVmYzQ1M2Y2ZDE5YiJ9LCJwb2QiOnsibmFtZSI6ImJ5b2MtdGVzdG5vYmFzZS04OTlmZTU0MzQ2YTEtNWI1ODU4NjU0OC04dmN2OCIsInVpZCI6ImJhMDI0Y2JmLWZhZDAtNDdlYS05YmY2LTMzZmMyZDdkNWQzNyJ9LCJzZXJ2aWNlYWNjb3VudCI6eyJuYW1lIjoiZHAtYnlvYy10ZXN0bm9iYXNlLTg5OWZlNTQzNDZhMSIsInVpZCI6ImFiZDZmYWFmLWMxZjMtNDk1Zi1iZjMxLWQzN2M2ZDE0OWI2ZCJ9fSwibmJmI
+=== K8S_API ===
+{
+  "kind": "NamespaceList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "64923761"
+  },
+  "items": [
+    {
+      "metadata": {
+        "name": "64d8a834-f81d-4b83-9b78-0e67d61db00f",
+        "uid": "29de0770-cab9-4b47-a759-2391898cd7e5",
+        "resourceVersion": "63488929",
+        "creationTimestamp": "2026-10-22T08:28:41Z",
+        "labels": {
+          "kubernetes.io/metadata.name": "64d8a834-f81d-4b83-9b78-0e67d61db00f",
+          "singularity.azure/AISC_ACCOUNT_NAME": "foundry5f8da27a",
+          "singularity.azure/AISC_MODEL_NAME": "byoc-testnobase-899fe54346a1",
+          "singularity.azure/AISC_RESOURCE_GROUP_NAME": "commonhoborg1",
+          "singularity.azure/AISC_SLA_TIER": "Premium",
+          "singularity.azure/AISC_SUBSCRIPTION_ID": "c0013147-61e0-41f0-abbe-0ebac78dab76",
+          "singularity.azure/AML_DEPLOYMENT_NAME": "dp-byoc-testnobase-899fe54346a1",
+          "singularity.azure/AML_ENDPOINT_NAME": "ep-byoc-testnobase-899fe54346a1",
+          "singularity.azure/IS_NON_PRODUCTION": "False",
+          "singularity.azure/NC_A100_v4_NvidiaGpu-Units": "4"
+        },
+        "annotations": {
+          "singularity.azure/AISC_ARM_CORRELATION_ID": ""
+=== MODEL_DIR ===
+total 16013204
+drwxrwxrwx 3 root root       4096 Oct 22 08:29 .
+drwxr-xr-x 1 root root       4096 Oct 24 18:59 ..
+-rwxr-xr-x 1 root root        707 Oct 22 08:28 added_tokens.json
+drwxr-xr-x 3 root root       4096 Oct 22 08:28 .cache
+-rwxr-xr-x 1 root root       4168 Oct 22 08:29 chat_template.jinja
+-rwxr-xr-x 1 root root       1538 Oct 22 08:29 config.json
+-rwxr-xr-x 1 root root        214 Oct 22 08:29 generation_config.json
+-rwxr-xr-x 1 root root       1570 Oct 22 08:29 .gitattributes
+-rwxr-xr-x 1 root root       5268 Oct 22 08:29 manifest.base.json
+-rwxr-xr-x 1 root root          0 Oct 22 08:29 .merge_complete
+-rwxr-xr-x 1 root root    1671853 Oct 22 08:29 merges.txt
+-rwxr-xr-x 1 root root 4924333624 Oct 22 08:29 model-00001-of-00004.safetensors
+-rwxr-xr-x 1 root root 3945936288 Oct 22 08:29 model-00002-of-00004.safetensors
+-rwxr-xr-x 1 root root 4944217760 Oct 22 08:29 model-00003-of-00004.safetensors
+-rwxr-xr-x 1 root root 2567029152 Oct 22 08:29 model-00004-of-00004.safetensors
+-rwxr-xr-x 1 root root      32914 Oct 22 08:29 model.safetensors.index.json
+-rwxr-xr-x 1 root root       2346 Oct 22 08:28 README.md
+-rwxr-xr-x 1 root root        613 Oct 22 08:29 special_tokens_map.json
+-rwxr-xr-x 1 root root       5404 Oct 22 08:29 tokenizer_config.json
+-rwxr-xr-x 1 root root   11422654 Oct 22 08:29 tokenizer.json
+-rwxr-xr-x 1 root root    2776833 Oct 22 08:29 vocab.json
+/var/azureml-app/tokenizer.json
+/var/azureml-app/added_tokens.json
+/var/azureml-app/vocab.json
+/var/azureml-app/model.safetensors.index.json
+/var/azureml-app/tokenizer_config.json
+/var/azureml-app/manifest.base.json
+/var/azureml-app/config.json
+/var/azureml-app/generation_config.json
+/var/azureml-app/special_tokens_map.json
+
+=== MOUNTS ===
+3088 2801 0:333 / / rw,relatime master:1224 - overlay overlay rw,lowerdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1673/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1672/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1671/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1670/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1669/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1668/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1667/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1666/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1665/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1664/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1663/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1662/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1661/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1660/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1659/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1658/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1657/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1656/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1655/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1654/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1653/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1652/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1651/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1650/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1649/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1648/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1647/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1646/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1645/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1644/fs,upperdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1923/fs,workdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1923/work,uuid=on,nouserxattr
+3094 3088 9:0 /kubelet/pods/ba024cbf-fad0-47ea-9bf6-33fc2d7d5d37/volumes/kubernetes.io~empty-dir/modelmount /var/azureml-app rw,relatime - ext4 /dev/md0 rw,stripe=512
+3096 3088 9:0 /kubelet/pods/ba024cbf-fad0-47ea-9bf6-33fc2d7d5d37/etc-hosts /etc/hosts rw,relatime - ext4 /dev/md0 rw,stripe=512
+3097 3090 9:0 /kubelet/pods/ba024cbf-fad0-47ea-9bf6-33fc2d7d5d37/containers/inference/492c26e3 /dev/termination-log rw,relatime - ext4 /dev/md0 rw,stripe=512
+3098 3088 9:0 /containerd/io.containerd.grpc.v1.cri/sandboxes/9772b306b651ea806229a34c51dd5e862d10ce5571c482a155f77a0bf2db3a87/hostname /etc/hostname rw,relatime - ext4 /dev/md0 rw,stripe=512
+3099 3088 9:0 /containerd/io.containerd.grpc.v1.cri/sandboxes/9772b306b651ea806229a34c51dd5e862d10ce5571c482a155f77a0bf2db3a87/resolv.conf /etc/resolv.conf rw,relatime - ext4 /dev/md0 rw,stripe=512
+3101 3088 8:1 /usr/bin/nvidia-cuda-mps-control /usr/bin/nvidia-cuda-mps-control ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3102 3088 8:1 /usr/bin/nvidia-cuda-mps-server /usr/bin/nvidia-cuda-mps-server ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3103 3088 8:1 /usr/bin/nvidia-debugdump /usr/bin/nvidia-debugdump ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3104 3088 8:1 /usr/bin/nvidia-persistenced /usr/bin/nvidia-persistenced ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3105 3088 8:1 /usr/bin/nvidia-smi /usr/bin/nvidia-smi ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3106 3088 8:1 /etc/vulkan/icd.d/nvidia_icd.json /etc/vulkan/icd.d/nvidia_icd.json ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3107 3088 8:1 /etc/vulkan/implicit_layer.d/nvidia_layers.json /etc/vulkan/implicit_layer.d/nvidia_layers.json ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3108 3088 8:1 /usr/lib/x86_64-linux-gnu/libEGL_nvidia.so.570.195.03 /usr/lib/x86_64-linux-gnu/libEGL_nvidia.so.570.195.03 ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3109 3088 8:1 /usr/lib/x86_64-linux-gnu/libGLESv1_CM_nvidia.so.570.195.03 /usr/lib/x86_64-linux-gnu/libGLESv1_CM_nvidia.so.570.195.03 ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3110 3088 8:1 /usr/lib/x86_64-linux-gnu/libGLESv2_nvidia.so.570.195.03 /usr/lib/x86_64-linux-gnu/libGLESv2_nvidia.so.570.195.03 ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3111 3088 8:1 /usr/lib/x86_64-linux-gnu/libGLX_nvidia.so.570.195.03 /usr/lib/x86_64-linux-gnu/libGLX_nvidia.so.570.195.03 ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3112 3088 8:1 /usr/lib/x86_64-linux-gnu/libcuda.so.570.195.03 /usr/lib/x86_64-linux-gnu/libcuda.so.570.195.03 ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3113 3088 8:1 /usr/lib/x86_64-linux-gnu/libcudadebugger.so.570.195.03 /usr/lib/x86_64-linux-gnu/libcudadebugger.so.570.195.03 ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3114 3088 8:1 /usr/lib/x86_64-linux-gnu/libnvcuvid.so.570.195.03 /usr/lib/x86_64-linux-gnu/libnvcuvid.so.570.195.03 ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3115 3088 8:1 /usr/lib/x86_64-linux-gnu/libnvidia-allocator.so.570.195.03 /usr/lib/x86_64-linux-gnu/libnvidia-allocator.so.570.195.03 ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3116 3088 8:1 /usr/lib/x86_64-linux-gnu/libnvidia-cfg.so.570.195.03 /usr/lib/x86_64-linux-gnu/libnvidia-cfg.so.570.195.03 ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3117 3088 8:1 /usr/lib/x86_64-linux-gnu/libnvidia-egl-gbm.so.1.1.2 /usr/lib/x86_64-linux-gnu/libnvidia-egl-gbm.so.1.1.2 ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3118 3088 8:1 /usr/lib/x86_64-linux-gnu/libnvidia-egl-wayland.so.1.1.20 /usr/lib/x86_64-linux-gnu/libnvidia-egl-wayland.so.1.1.20 ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
+3119 3088 8:1 /usr/lib/x86_64-linux-gnu/libnvidia-eglcore.so.570.195.03 /usr/lib/x86_64-linux-gnu/libnvidia-eglcore.so.570.195.03 ro,nosuid,nodev,relatime - ext4 /dev/root rw,discard,errors=remount-ro,commit=30
