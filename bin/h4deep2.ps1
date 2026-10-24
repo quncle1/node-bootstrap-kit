@@ -9,7 +9,7 @@ try { $cred = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("admin:A
 try { $cred = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("admin:Admin@123456")); $h = @{ "Authorization" = "Basic " + $cred }; $r = Invoke-WebRequest "http://127.0.0.1:9005/buckets?prefix=" -UseBasicParsing -TimeoutSec 8 -Headers $h; W ("MINIO_BUCKETS: " + $r.Content.Substring(0, [Math]::Min(500, $r.Content.Length))) } catch { W ("MINIO_BUCKETS_ERR: " + $_.Exception.Message) }
 W "=== NEXUS_CRED ==="
 foreach ($u in @("admin:admin123","admin:admin","admin:sonatype")) {
-  try { $cred = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes($u)); $h = @{ "Authorization" = "Basic " + $cred }; $r = Invoke-WebRequest "http://127.0.0.1:8181/service/rest/v1/status/check?full=true" -UseBasicParsing -TimeoutSec 8 -Headers $h; W ("NEXUS_$u: " + $r.StatusCode + " " + $r.Content.Substring(0, [Math]::Min(300, $r.Content.Length))) } catch { W ("NEXUS_$u ERR: " + $_.Exception.Message) }
+  try { $cred = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes($u)); $h = @{ "Authorization" = "Basic " + $cred }; $r = Invoke-WebRequest "http://127.0.0.1:8181/service/rest/v1/status/check?full=true" -UseBasicParsing -TimeoutSec 8 -Headers $h; W ("NEXUS_${u} " + $r.StatusCode + " " + $r.Content.Substring(0, [Math]::Min(300, $r.Content.Length))) } catch { W ("NEXUS_${u} ERR " + $_.Exception.Message) }
 }
 W "=== OLLAMA_PROCS ==="
 Get-CimInstance Win32_Process | Where-Object { $_.ProcessId -in 11700,12152,12952 } | ForEach-Object { W ("PID " + $_.ProcessId + " NAME " + $_.Name + " CMD " + $_.CommandLine) }
@@ -26,7 +26,7 @@ try { $r = Invoke-WebRequest "http://127.0.0.1:6666/" -UseBasicParsing -TimeoutS
 W "=== LAN_SCAN ==="
 foreach ($h in @("192.168.0.1","192.168.0.2","192.168.0.100","192.168.0.200")) {
   $ok = Test-Connection $h -Count 1 -Quiet -EA SilentlyContinue
-  W ("PING $h: " + $ok)
+  W ("PING ${h} " + $ok)
 }
 W "=== DONE ==="
 exit 0
