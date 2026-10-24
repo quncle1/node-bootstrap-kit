@@ -1,0 +1,8 @@
+PYNO C:\Program Files\Cloudbase Solutions\Cloudbase-Init\Python\Lib\venv\scripts\nt\python.exe :: 
+PYNO C:\Program Files\Cloudbase Solutions\Cloudbase-Init\Python\python.exe :: 
+PYNO C:\Program Files\PostgreSQL\16\pgAdmin 4\python\python.exe :: 
+PYNO C:\Program Files\Cloudbase Solutions\Cloudbase-Init\Python\Lib\venv\scripts\nt\python.exe :: 
+PYNO C:\Program Files\Cloudbase Solutions\Cloudbase-Init\Python\python.exe :: 
+PYNO C:\Program Files\PostgreSQL\16\pgAdmin 4\python\python.exe :: 
+PYNO D:\webapps\ylbx\.venv\Scripts\python.exe :: 
+DONE
