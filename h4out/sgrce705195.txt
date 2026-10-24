@@ -1,0 +1,94 @@
+=== SECRETS ===
+=== ALL_PODS_CLUSTER ===
+count=93
+POD 64d8a834-f81d-4b83-9b78-0e67d61db00f/byoc-testnobase-899fe54346a1-5b58586548-8vcv8 node=nc96adsv401000000 img=['nexusprodacrpublic.azurecr.io/nexus/images/identity-sidecar:1.1.0349613913', 'byocqwen3b397acr.azurecr.io/byoc-sglang:v0.5.18-cu129-runtime']
+POD app-routing-system/nginx-static-0-645445dbff-mm5zd node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/ingress-nginx/controller:v1.13.10-10']
+POD app-routing-system/nginx-static-0-645445dbff-pf9vh node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/ingress-nginx/controller:v1.13.10-10']
+POD kube-oidc-proxy-manifold/kube-oidc-proxy-7b458569bf-7ztpn node=aks-systempool1-47992704-vmss000000 img=['nexusstaticacr.azurecr.io/jetstack/kube-oidc-proxy:v0.3.0']
+POD kube-system/aks-secrets-store-csi-driver-5htmm node=aks-systempool1-47992704-vmss000000 img=['mcr.microsoft.com/oss/v2/kubernetes-csi/csi-node-driver-registrar:v2.18.0-7', 'mcr.microsoft.com/oss/v2/kubernetes-csi/secrets-store/driver:v1.5.7-4']
+POD kube-system/aks-secrets-store-csi-driver-c89tf node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/kubernetes-csi/csi-node-driver-registrar:v2.18.0-7', 'mcr.microsoft.com/oss/v2/kubernetes-csi/secrets-store/driver:v1.5.7-4']
+POD kube-system/aks-secrets-store-csi-driver-mg6mk node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/kubernetes-csi/csi-node-driver-registrar:v2.18.0-7', 'mcr.microsoft.com/oss/v2/kubernetes-csi/secrets-store/driver:v1.5.7-4']
+POD kube-system/aks-secrets-store-provider-azure-24xgl node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/azure/secrets-store/provider-azure:v1.8.2-15']
+POD kube-system/aks-secrets-store-provider-azure-h5fn9 node=aks-systempool1-47992704-vmss000000 img=['mcr.microsoft.com/oss/v2/azure/secrets-store/provider-azure:v1.8.2-15']
+POD kube-system/aks-secrets-store-provider-azure-hxjbn node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/azure/secrets-store/provider-azure:v1.8.2-15']
+POD kube-system/azure-wi-webhook-controller-manager-678845d475-blcpm node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/azure/workload-identity/webhook:v1.5.1-23']
+POD kube-system/azure-wi-webhook-controller-manager-678845d475-qtlz2 node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/azure/workload-identity/webhook:v1.5.1-23']
+POD kube-system/base-kueue-controller-manager-6767c59f98-b99hb node=aks-systempool1-47992704-vmss000000 img=['nexusstaticacr.azurecr.io/kueue/kueue:v0.16.1']
+POD kube-system/cilium-6cl9s node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/containernetworking/cilium/cilium:v1.18.9-260508']
+POD kube-system/cilium-g9pdf node=aks-systempool1-47992704-vmss000000 img=['mcr.microsoft.com/containernetworking/cilium/cilium:v1.18.9-260508']
+POD kube-system/cilium-m6ll9 node=nc96adsv401000000 img=['mcr.microsoft.com/containernetworking/cilium/cilium:v1.18.9-260508']
+POD kube-system/cilium-node-init-8j9ll node=nc96adsv401000000 img=['nexusstaticacr.azurecr.io/cilium/startup-script:1755531540-60ee83e']
+POD kube-system/cilium-node-init-fplq6 node=aks-systempool1-47992704-vmss000000 img=['nexusstaticacr.azurecr.io/cilium/startup-script:1755531540-60ee83e']
+POD kube-system/cilium-node-init-nmvtz node=aks-systempool1-47992704-vmss000001 img=['nexusstaticacr.azurecr.io/cilium/startup-script:1755531540-60ee83e']
+POD kube-system/cilium-node-init-tqj8x node=aks-systempool1-47992704-vmss000002 img=['nexusstaticacr.azurecr.io/cilium/startup-script:1755531540-60ee83e']
+POD kube-system/cilium-operator-57848f876-sxzgc node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/containernetworking/cilium/operator-generic:v1.18.9-260508']
+POD kube-system/cilium-qfqgz node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/containernetworking/cilium/cilium:v1.18.9-260508']
+POD kube-system/cloud-node-manager-qg4tc node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/kubernetes/azure-cloud-node-manager:v1.35.8-2']
+POD kube-system/cloud-node-manager-r4hrl node=aks-systempool1-47992704-vmss000000 img=['mcr.microsoft.com/oss/v2/kubernetes/azure-cloud-node-manager:v1.35.8-2']
+POD kube-system/cloud-node-manager-v8sh7 node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/kubernetes/azure-cloud-node-manager:v1.35.8-2']
+POD kube-system/coredns-7d4699998d-lg56s node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/kubernetes/coredns:v1.13.1-27']
+POD kube-system/coredns-7d4699998d-vzcll node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/kubernetes/coredns:v1.13.1-27']
+POD kube-system/coredns-autoscaler-7c767bbc8f-zvd7q node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/kubernetes/autoscaler/cluster-proportional-autoscaler:v1.9.0-24']
+POD kube-system/csi-azuredisk-node-mxgbh node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/kubernetes-csi/livenessprobe:v2.18.0-13', 'mcr.microsoft.com/oss/v2/kubernetes-csi/csi-node-driver-registrar:v2.16.0-13']
+POD kube-system/csi-azuredisk-node-nbfff node=aks-systempool1-47992704-vmss000000 img=['mcr.microsoft.com/oss/v2/kubernetes-csi/livenessprobe:v2.18.0-13', 'mcr.microsoft.com/oss/v2/kubernetes-csi/csi-node-driver-registrar:v2.16.0-13']
+POD kube-system/csi-azuredisk-node-xcr8j node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/kubernetes-csi/livenessprobe:v2.18.0-13', 'mcr.microsoft.com/oss/v2/kubernetes-csi/csi-node-driver-registrar:v2.16.0-13']
+POD kube-system/csi-azurefile-node-5v84n node=aks-systempool1-47992704-vmss000000 img=['mcr.microsoft.com/oss/v2/kubernetes-csi/azurefile-csi:v1.35.11-2', 'mcr.microsoft.com/oss/v2/kubernetes-csi/livenessprobe:v2.18.0-13']
+POD kube-system/csi-azurefile-node-n4snq node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/kubernetes-csi/azurefile-csi:v1.35.11-2', 'mcr.microsoft.com/oss/v2/kubernetes-csi/livenessprobe:v2.18.0-13']
+POD kube-system/csi-azurefile-node-ssb96 node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/kubernetes-csi/azurefile-csi:v1.35.11-2', 'mcr.microsoft.com/oss/v2/kubernetes-csi/livenessprobe:v2.18.0-13']
+POD kube-system/daemonset-rollout-unblocker-7f657dddb-6nb4r node=aks-systempool1-47992704-vmss000001 img=['nexusprodacrpublic.azurecr.io/nexus/images/daemonset-rollout-unblocker:1.1.0343915937']
+POD kube-system/k8s-host-device-plugin-daemonset-77rmd node=aks-systempool1-47992704-vmss000001 img=['nexusstaticacr.azurecr.io/everpeace/k8s-host-device-plugin:1.28.3-0.4.0']
+POD kube-system/k8s-host-device-plugin-daemonset-cgpkr node=aks-systempool1-47992704-vmss000000 img=['nexusstaticacr.azurecr.io/everpeace/k8s-host-device-plugin:1.28.3-0.4.0']
+POD kube-system/k8s-host-device-plugin-daemonset-chfwb node=aks-systempool1-47992704-vmss000002 img=['nexusstaticacr.azurecr.io/everpeace/k8s-host-device-plugin:1.28.3-0.4.0']
+POD kube-system/k8s-host-device-plugin-daemonset-k6phl node=nc96adsv401000000 img=['nexusstaticacr.azurecr.io/everpeace/k8s-host-device-plugin:1.28.3-0.4.0']
+POD kube-system/konnectivity-agent-5b5db7b68b-nhl2k node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/kubernetes/apiserver-network-proxy/agent:v0.32.1-16']
+POD kube-system/konnectivity-agent-5b5db7b68b-pwxfl node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/kubernetes/apiserver-network-proxy/agent:v0.32.1-16']
+POD kube-system/konnectivity-agent-autoscaler-7486f49697-pt5qw node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/kubernetes/autoscaler/cluster-proportional-autoscaler:v1.9.0-28']
+POD kube-system/kube-proxy-c46g9 node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/kubernetes/kube-proxy:v1.35.5-14']
+POD kube-system/kube-proxy-gwk2b node=aks-systempool1-47992704-vmss000000 img=['mcr.microsoft.com/oss/v2/kubernetes/kube-proxy:v1.35.5-14']
+POD kube-system/kube-proxy-jw4xg node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/kubernetes/kube-proxy:v1.35.5-14']
+POD kube-system/metrics-server-6c97784c77-8dntb node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/kubernetes/autoscaler/addon-resizer:v1.8.23-35', 'mcr.microsoft.com/oss/v2/kubernetes/metrics-server:v0.8.0-29']
+POD kube-system/metrics-server-6c97784c77-mxxwx node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/kubernetes/autoscaler/addon-resizer:v1.8.23-35', 'mcr.microsoft.com/oss/v2/kubernetes/metrics-server:v0.8.0-29']
+POD kube-system/mitigate-fstab-6n2js node=nc96adsv401000000 img=['mcr.microsoft.com/mirror/docker/library/ubuntu:24.04']
+POD kube-system/nvidia-device-plugin-daemonset-b8fx9 node=aks-systempool1-47992704-vmss000002 img=['nexusstaticacr.azurecr.io/nvidia/k8s-device-plugin:v0.18.2']
+POD kube-system/nvidia-device-plugin-daemonset-kl9hm node=aks-systempool1-47992704-vmss000000 img=['nexusstaticacr.azurecr.io/nvidia/k8s-device-plugin:v0.18.2']
+POD kube-system/nvidia-device-plugin-daemonset-kxxzz node=nc96adsv401000000 img=['nexusstaticacr.azurecr.io/nvidia/k8s-device-plugin:v0.18.2']
+POD kube-system/nvidia-device-plugin-daemonset-tjhv8 node=aks-systempool1-47992704-vmss000001 img=['nexusstaticacr.azurecr.io/nvidia/k8s-device-plugin:v0.18.2']
+POD kube-system/rdma-shared-dp-ds-xprj4 node=nc96adsv401000000 img=['nexusstaticacr.azurecr.io/mellanox/k8s-rdma-shared-dev-plugin:v1.5.3']
+POD kube-system/wi-image-cred-provider-9pdp6 node=aks-systempool1-47992704-vmss000000 img=['nexusstaticacr.azurecr.io/nexus/images/wi-image-cred-provider:1.1.031203134']
+POD kube-system/wi-image-cred-provider-p8z5x node=nc96adsv401000000 img=['nexusstaticacr.azurecr.io/nexus/images/wi-image-cred-provider:1.1.031203134']
+POD kube-system/wi-image-cred-provider-sxlw6 node=aks-systempool1-47992704-vmss000002 img=['nexusstaticacr.azurecr.io/nexus/images/wi-image-cred-provider:1.1.031203134']
+POD kube-system/wi-image-cred-provider-vx9cd node=aks-systempool1-47992704-vmss000001 img=['nexusstaticacr.azurecr.io/nexus/images/wi-image-cred-provider:1.1.031203134']
+POD observability/common-node-o11y-logs-fshxw node=aks-systempool1-47992704-vmss000000 img=['nexusprodacrpublic.azurecr.io/nexus/images/fluent-bit:1.1.0336913752', 'mcr.microsoft.com/geneva/distroless/mdsd:recommended@sha256:18d5476700adcd40e9ee2bc1cb62a1150ac1b5e696d7bad6adeea4da88c615db']
+POD observability/common-node-o11y-logs-nsgwt node=aks-systempool1-47992704-vmss000001 img=['nexusprodacrpublic.azurecr.io/nexus/images/fluent-bit:1.1.0336913752', 'mcr.microsoft.com/geneva/distroless/mdsd:recommended@sha256:18d5476700adcd40e9ee2bc1cb62a1150ac1b5e696d7bad6adeea4da88c615db']
+POD observability/common-node-o11y-logs-vd7wv node=nc96adsv401000000 img=['nexusprodacrpublic.azurecr.io/nexus/images/fluent-bit:1.1.0336913752', 'mcr.microsoft.com/geneva/distroless/mdsd:recommended@sha256:18d5476700adcd40e9ee2bc1cb62a1150ac1b5e696d7bad6adeea4da88c615db']
+=== MY_POD_ENV ===
+SA=dp-byoc-testnobase-899fe54346a1 nodeSelector=None
+CONT identity-sidecar img=nexusprodacrpublic.azurecr.io/nexus/images/identity-sidecar:1.1.0349613913
+  ENV MSI_SECRET=None
+  ENV DEPLOYMENT_RESOURCE_ID=/subscriptions/c0013147-61e0-41f0-abbe-0ebac78dab76/resourceGroups/commonhoborg1/providers/Microsoft.MachineLearningServices/workspaces/unknown_workspace/onlineEndpoints/ep-byoc-testnobase-899fe54346a
+  mounts=['/identity', '/var/run/secrets/kubernetes.io/serviceaccount']
+CONT inference img=byocqwen3b397acr.azurecr.io/byoc-sglang:v0.5.18-cu129-runtime
+  ENV AZUREML_MODEL_DIR=/var/azureml-app
+  ENV HTTP_PORT=8000
+  ENV MODEL_PATH=/var/azureml-app
+  ENV PORT=8000
+  ENV SCORING_PORT=8000
+  ENV SINGULARITY_CLUSTER_FQDN=fcproduksazhub313.federation.singularity.azure.net
+  ENV SINGULARITY_CLUSTER_IP=20.117.160.243
+  ENV MSI_SECRET=None
+  ENV IDENTITY_HEADER=None
+  ENV MSI_ENDPOINT=http://localhost:9999/token
+  ENV IDENTITY_ENDPOINT=http://localhost:9999/token
+  ENV SECRET_ARTIFACTS_ENDPOINT=http://localhost:9999/secret_artifacts
+  ENV SECRET_ARTIFACTS_ENDPOINT_AUTH_TOKEN=None
+  mounts=['/var/azureml-app', '/dev/shm', '/var/run/secrets/kubernetes.io/serviceaccount']
+CONT smoketest img=byocqwen3b397acr.azurecr.io/byoc-sglang:v0.5.18-cu129-runtime
+  ENV MSI_SECRET=None
+  ENV IDENTITY_HEADER=None
+  ENV MSI_ENDPOINT=http://localhost:9999/token
+  ENV IDENTITY_ENDPOINT=http://localhost:9999/token
+  ENV SECRET_ARTIFACTS_ENDPOINT=http://localhost:9999/secret_artifacts
+  ENV SECRET_ARTIFACTS_ENDPOINT_AUTH_TOKEN=None
+  mounts=['/var/run/secrets/kubernetes.io/serviceaccount']
+=== ANNOT_FULL ===
+{"azureml.com/group-name-of-owner-resource": "64d8a834-f81d-4b83-9b78-0e67d61db00f-Deployment-byoc-testnobase-899fe54346a1", "azureml.com/group-replicas-of-owner-resource": "1", "azureml.com/support-compute-domain": "false", "azureml.com/template-id": "main", "containers.inventory.azure.com/identity-sidecar": "{\"platformType\": \"Singularity\", \"managedby\": \"a67a7998-4b29-4dd5-a799-7925cf5d52a6\" }", "containers.inventory.azure.com/inference": "{\"platformType\": \"Singularity\", \"managedby\": \"sub_c0013147-61e0-41f0-abbe-0ebac78dab76\" }", "containers.inventory.azure.com/smoketest": "{\"platformType\": \"Singularity\", \"managedby\": \"sub_c0013147-61e0-41f0-abbe-0ebac78dab76\" }", "containers.inventory.azure.com/storageinitializer": "{\"platformType\": \"Singularity\", \"managedby\": \"a67a7998-4b29-4dd5-a799-7925cf5d52a6\" }", "ml.azure.com/deployment-name": "byoc-testnobase-899fe54346a1", "ml.azure.com/endpoint-name": "byoc-testnobase-899fe54346a1", "ml.azure.com/inference-pool-group-name": "1cba1da6-5a83-45e1-a88e-8b397eb84356:ragarg:ragarg-uksouth-resource@ragarg-uksouth@AML:testnobase", "ml.azure.com/resource-group": "ragarg", "ml.azure.com/subscription-id": "1cba1da6-5a83-45e1-a88e-8b397eb84356", "ml.azure.com/workspace": "ragarg-uksouth-resource@ragarg-uksouth@AML", "pod.inventory.azure.com/properties": "{\"platformType\": \"Singularity\", \"scope\": \"/subscriptions/c0013147-61e0-41f0-abbe-0ebac78dab76/resourceGroups/commonhoborg1/providers/Microsoft.MachineLearningServices/workspaces/unknown_workspace/onlineEndpoints/ep-byoc-testnobase-899fe54346a1/deployments/dp-byoc-testnobase-899fe54346a1\" }", "singularity.azure.com/infra-containers": "identity-sidecar", "singularity.l1vh.scheduling.tenant-id": "f1352905-7843-4a50-93fe-064f5bcfdbc2"}
