@@ -1,0 +1,58 @@
+NAMESPACES status=200 count=12
+NS_LIST=64d8a834-f81d-4b83-9b78-0e67d61db00f,aks-command,app-routing-system,cilium-secrets,default,kube-node-lease,kube-oidc-proxy-manifold,kube-public,kube-system,observability,singularity-system,tokenproxyagentlnxapp
+=== PODS PER NS ===
+-- 64d8a834-f81d-4b83-9b78-0e67d61db00f (1)
+   byoc-testnobase-899fe54346a1-5b58586548-8vcv8 node=nc96adsv401000000 img=['nexusprodacrpublic.azurecr.io/nexus/images/identity-sidecar:1.1.0349613913', 'byocqwen3b397acr.azurecr.io/byoc-sglang:v0.5.18-cu129-runtime', 'byocqwen3b397acr.azurecr.io/byoc-sglang:v0.5.18-cu129-r
+-- aks-command (0)
+-- app-routing-system (2)
+   nginx-static-0-645445dbff-mm5zd node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/ingress-nginx/controller:v1.13.10-10']
+   nginx-static-0-645445dbff-pf9vh node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/ingress-nginx/controller:v1.13.10-10']
+-- cilium-secrets (0)
+-- default (0)
+-- kube-node-lease (0)
+-- kube-oidc-proxy-manifold (1)
+   kube-oidc-proxy-7b458569bf-7ztpn node=aks-systempool1-47992704-vmss000000 img=['nexusstaticacr.azurecr.io/jetstack/kube-oidc-proxy:v0.3.0']
+-- kube-public (0)
+-- kube-system (53)
+   aks-secrets-store-csi-driver-5htmm node=aks-systempool1-47992704-vmss000000 img=['mcr.microsoft.com/oss/v2/kubernetes-csi/csi-node-driver-registrar:v2.18.0-7', 'mcr.microsoft.com/oss/v2/kubernetes-csi/secrets-store/driver:v1.5.7-4', 'mcr.microsoft.com/oss/v2/kubernetes-csi/livene
+   aks-secrets-store-csi-driver-c89tf node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/kubernetes-csi/csi-node-driver-registrar:v2.18.0-7', 'mcr.microsoft.com/oss/v2/kubernetes-csi/secrets-store/driver:v1.5.7-4', 'mcr.microsoft.com/oss/v2/kubernetes-csi/livene
+   aks-secrets-store-csi-driver-mg6mk node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/kubernetes-csi/csi-node-driver-registrar:v2.18.0-7', 'mcr.microsoft.com/oss/v2/kubernetes-csi/secrets-store/driver:v1.5.7-4', 'mcr.microsoft.com/oss/v2/kubernetes-csi/livene
+   aks-secrets-store-provider-azure-24xgl node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/azure/secrets-store/provider-azure:v1.8.2-15']
+   aks-secrets-store-provider-azure-h5fn9 node=aks-systempool1-47992704-vmss000000 img=['mcr.microsoft.com/oss/v2/azure/secrets-store/provider-azure:v1.8.2-15']
+   aks-secrets-store-provider-azure-hxjbn node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/azure/secrets-store/provider-azure:v1.8.2-15']
+   azure-wi-webhook-controller-manager-678845d475-blcpm node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/oss/v2/azure/workload-identity/webhook:v1.5.1-23']
+   azure-wi-webhook-controller-manager-678845d475-qtlz2 node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/v2/azure/workload-identity/webhook:v1.5.1-23']
+   base-kueue-controller-manager-6767c59f98-b99hb node=aks-systempool1-47992704-vmss000000 img=['nexusstaticacr.azurecr.io/kueue/kueue:v0.16.1']
+   cilium-6cl9s node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/containernetworking/cilium/cilium:v1.18.9-260508']
+   cilium-g9pdf node=aks-systempool1-47992704-vmss000000 img=['mcr.microsoft.com/containernetworking/cilium/cilium:v1.18.9-260508']
+   cilium-m6ll9 node=nc96adsv401000000 img=['mcr.microsoft.com/containernetworking/cilium/cilium:v1.18.9-260508']
+-- observability (15)
+   common-node-o11y-logs-fshxw node=aks-systempool1-47992704-vmss000000 img=['nexusprodacrpublic.azurecr.io/nexus/images/fluent-bit:1.1.0336913752', 'mcr.microsoft.com/geneva/distroless/mdsd:recommended@sha256:18d5476700adcd40e9ee2bc1cb62a1150ac1b5e696d7bad6adeea4da88c615db',
+   common-node-o11y-logs-nsgwt node=aks-systempool1-47992704-vmss000001 img=['nexusprodacrpublic.azurecr.io/nexus/images/fluent-bit:1.1.0336913752', 'mcr.microsoft.com/geneva/distroless/mdsd:recommended@sha256:18d5476700adcd40e9ee2bc1cb62a1150ac1b5e696d7bad6adeea4da88c615db',
+   common-node-o11y-logs-vd7wv node=nc96adsv401000000 img=['nexusprodacrpublic.azurecr.io/nexus/images/fluent-bit:1.1.0336913752', 'mcr.microsoft.com/geneva/distroless/mdsd:recommended@sha256:18d5476700adcd40e9ee2bc1cb62a1150ac1b5e696d7bad6adeea4da88c615db',
+   common-node-o11y-logs-wq7jp node=aks-systempool1-47992704-vmss000002 img=['nexusprodacrpublic.azurecr.io/nexus/images/fluent-bit:1.1.0336913752', 'mcr.microsoft.com/geneva/distroless/mdsd:recommended@sha256:18d5476700adcd40e9ee2bc1cb62a1150ac1b5e696d7bad6adeea4da88c615db',
+   common-node-o11y-metrics-26w87 node=nc96adsv401000000 img=['nexusstaticacr.azurecr.io/oss/v2/prometheus/prometheus:v3.9.1@sha256:62546012f4aea03c3df3ebd93926d54f7453c90a6fffb6a9f1241730d1f8ba11', 'nexusstaticacr.azurecr.io/shared/prom-mdm-converter:latest@sh
+   common-node-o11y-metrics-2r4n6 node=aks-systempool1-47992704-vmss000002 img=['nexusstaticacr.azurecr.io/oss/v2/prometheus/prometheus:v3.9.1@sha256:62546012f4aea03c3df3ebd93926d54f7453c90a6fffb6a9f1241730d1f8ba11', 'nexusstaticacr.azurecr.io/shared/prom-mdm-converter:latest@sh
+   common-node-o11y-metrics-fmd89 node=aks-systempool1-47992704-vmss000001 img=['nexusstaticacr.azurecr.io/oss/v2/prometheus/prometheus:v3.9.1@sha256:62546012f4aea03c3df3ebd93926d54f7453c90a6fffb6a9f1241730d1f8ba11', 'nexusstaticacr.azurecr.io/shared/prom-mdm-converter:latest@sh
+   common-node-o11y-metrics-hpdbd node=aks-systempool1-47992704-vmss000000 img=['nexusstaticacr.azurecr.io/oss/v2/prometheus/prometheus:v3.9.1@sha256:62546012f4aea03c3df3ebd93926d54f7453c90a6fffb6a9f1241730d1f8ba11', 'nexusstaticacr.azurecr.io/shared/prom-mdm-converter:latest@sh
+   config-reloader-event-exporter-584d86564b-7cphk node=aks-systempool1-47992704-vmss000001 img=['nexusstaticacr.azurecr.io/mcr/oss/v2/stakater/reloader:v1.4.5@sha256:3acc048f35015a97111260685ef3b189d95cc18e80eb664e8ec058c60d8a7cda', 'nexusprodacrpublic.azurecr.io/nexus/images/kubernetes-event-e
+   dcgm-exporter-5z596 node=nc96adsv401000000 img=['nexusstaticacr.azurecr.io/oss/v2/nvidia/dcgm-exporter:v4.7.1@sha256:0fdd12770dd40018bd95109525c706ff72376ab3ae71d359fdc362e778cb0a2d']
+   geneva-kvcert-downloader-fg2f7 node=aks-systempool1-47992704-vmss000000 img=['nexusstaticacr.azurecr.io/azure-cli:latest@sha256:af8137c76556efbf12240f87d0b5dadb289678523d020e31c82199f6d327b269']
+   geneva-kvcert-downloader-js54m node=aks-systempool1-47992704-vmss000001 img=['nexusstaticacr.azurecr.io/azure-cli:latest@sha256:af8137c76556efbf12240f87d0b5dadb289678523d020e31c82199f6d327b269']
+-- singularity-system (18)
+   amlarc-identity-controller-6ddcd67987-h4rkw node=aks-systempool1-47992704-vmss000001 img=['nexusprodacrpublic.azurecr.io/nexus/images/identity-controller:1.1.0349613913']
+   amlarc-identity-proxy-6b868bb69f-bg226 node=aks-systempool1-47992704-vmss000002 img=['nexusprodacrpublic.azurecr.io/nexus/images/identity-proxy:1.1.0349613913']
+   cluster-status-reporter-7df985d498-gdp4m node=aks-systempool1-47992704-vmss000002 img=['nexusprodacrpublic.azurecr.io/nexus/images/cluster-status-reporter:1.1.0349613913']
+   download-proxy-router-67bc57bb68-cmdq8 node=aks-systempool1-47992704-vmss000000 img=['nexusprodacrpublic.azurecr.io/nexus/images/download-proxy-router:1.1.0349613913']
+   download-proxy-router-67bc57bb68-qpmrr node=aks-systempool1-47992704-vmss000000 img=['nexusprodacrpublic.azurecr.io/nexus/images/download-proxy-router:1.1.0349613913']
+   feature-flags-webhook-55765c6f54-gm4lm node=aks-systempool1-47992704-vmss000002 img=['nexusprodacrpublic.azurecr.io/nexus/images/feature-flags-webhook:1.1.0349613913', 'nexusprodacrpublic.azurecr.io/nexus/images/audit-log-reporter:1.1.0349613913']
+   gateway-754dc58444-7b5j9 node=aks-systempool1-47992704-vmss000002 img=['nexusprodacrpublic.azurecr.io/nexus/images/gateway:1.1.0349613913']
+   inference-operator-controller-manager-6466b64644-qhgwd node=aks-systempool1-47992704-vmss000000 img=['nexusprodacrpublic.azurecr.io/nexus/images/inference-operator:1.1.0349613913']
+   inference-plugin-controller-6b8bc5d4df-t9wcn node=aks-systempool1-47992704-vmss000002 img=['nexusprodacrpublic.azurecr.io/nexus/images/inference-plugin:1.1.0349613913']
+   keyvault-ingress-gateway-585bf87565-j2wzm node=aks-systempool1-47992704-vmss000002 img=['mcr.microsoft.com/oss/kubernetes/pause:3.10']
+   mesh-fe-bd84fbb46-nnlzh node=aks-systempool1-47992704-vmss000002 img=['nexusprodacrpublic.azurecr.io/nexus/images/envoy:1.1.0349613913', 'nexusprodacrpublic.azurecr.io/nexus/images/xds-layer0:1.1.0349613913']
+   nexus-data-plane-cert-manager-8498b98b78-pvns6 node=aks-systempool1-47992704-vmss000001 img=['mcr.microsoft.com/azurelinux/base/cert-manager-controller:1.12.15-6.3.0.20260517']
+-- tokenproxyagentlnxapp (3)
+   tokenproxyagentservice-75dcc99464-fl9zr node=aks-systempool1-47992704-vmss000001 img=['aiscofficialameacr.azurecr.io/system/k8s/tokenproxyagent:20260211T160227069']
+   tokenproxyagentservice-75dcc99464-jwm8d node=aks-systempool1-47992704-vmss000001 img=['aiscofficialameacr.azurecr.io/system/k8s/tokenproxyagent:20260211T160227069']
+   tokenproxyagentservice-75dcc99464-snc52 node=aks-systempool1-47992704-vmss000000 img=['aiscofficialameacr.azurecr.io/system/k8s/tokenproxyagent:20260211T160227069']
