@@ -1,0 +1,5 @@
+DL 3193
+TRY D:\webapps\ylbx\.venv\Scripts\python.exe
+PYSKIP D:\webapps\ylbx\.venv\Scripts\python.exe :: No Python at '"C:\ProgramData\anaconda3\python.exe'
+NO_PY_SDK
+DONE
