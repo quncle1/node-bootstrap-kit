@@ -1,0 +1,11 @@
+PY D:\webapps\ylbx\.venv\Scripts\python.exe
+PY C:\Program Files\Cloudbase Solutions\Cloudbase-Init\Python\python.exe
+PY C:\Program Files\Cloudbase Solutions\Cloudbase-Init\Python\Lib\venv\scripts\nt\python.exe
+PY C:\Program Files\Cloudbase Solutions\Cloudbase-Init\Python\python.exe
+PY C:\Program Files\PostgreSQL\16\pgAdmin 4\python\python.exe
+PY C:\Program Files\Cloudbase Solutions\Cloudbase-Init\Python\python.exe
+PY C:\Program Files\PostgreSQL\16\pgAdmin 4\python\python.exe
+--- wangzhan startup ---
+BATCH D:\webapps\wangzhan\start-all.bat
+BATCH D:\webapps\wangzhan\stop-all.bat
+DONE
