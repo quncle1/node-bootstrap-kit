@@ -1,0 +1,7 @@
+=== SECRET READ ===
+ERR
+=== SIDECAR TOKEN CALL ===
+{"message":"Secret header must be set with correct value"}
+
+=== ARM SUBSCRIPTIONS ===
+NO_ARM_TOKEN
