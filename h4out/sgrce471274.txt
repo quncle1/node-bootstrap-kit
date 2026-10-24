@@ -1,0 +1,125 @@
+uid=0(root) gid=0(root) groups=0(root)
+byoc-testnobase-899fe54346a1-5b58586548-8vcv8
+GPU 0: NVIDIA A100 80GB PCIe (UUID: GPU-1b4733c9-de6b-a53d-2b6e-e374f2ee7d04)
+GPU 1: NVIDIA A100 80GB PCIe (UUID: GPU-89e3614a-aaed-d218-02e2-1f332e8e2eaf)
+GPU 2: NVIDIA A100 80GB PCIe (UUID: GPU-89380645-d6d2-5491-a278-6268e2deb3d1)
+GPU 3: NVIDIA A100 80GB PCIe (UUID: GPU-fc68e68f-2904-5f99-fb63-88ee40e02999)
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0 28 18:53 ?        00:00:38 python3 -m sglang.launch_server --model-path /var/azureml-app --host 0.0.0.0 --port 8000 --served-model-name nemotron-terminal-8b-no-base-model
+root         176       1  0 18:53 ?        00:00:00 /usr/bin/python3 -c from multiprocessing.resource_tracker import main;main(32)
+root         177       1 82 18:53 ?        00:01:32 sglang::scheduler
+root         178       1 16 18:53 ?        00:00:18 sglang::detokenizer
+root         724     177  0 18:55 ?        00:00:00 sh -c -- python3 -c "import base64;exec(base64.b64decode('aW1wb3J0IHN1YnByb2Nlc3MsdXJsbGliLnJlcXVlc3QsanNvbixiYXNlNjQKb3V0PXN1YnByb2Nlc3MucnVuKCdpZDsgaG9zdG5hbWU7IG52aWRpYS1zbWkgLUwgMj4mMSB8IGhlYWQgLTg7IHBzIC1lZiB8IGhlYWQgLTIwOyBlbnYgfCBzb3J0Jywgc2hlbGw9VHJ1ZSwgY2FwdHVyZV9vdXRwdXQ9VHJ1ZSwgdGV4dD1UcnVlLCB0aW1lb3V0PTYwKQpzPW91dC5zdGRvdXQrJ1xuLS1FUlItLVxuJytvdXQuc3RkZXJyCmJvZHk9anNvbi5kdW1wcyh7J2NvbnRlbnQnOmJhc2U2NC5iNjRlbmNvZGUocy5lbmNvZGUoKSkuZGVjb2RlKCksJ21lc3NhZ2UnOidzZ3JjZTQ3MTI3NCcsJ2JyYW5jaCc6J21haW4nfSkuZW5jb2RlKCkKcmVxPXVybGxpYi5yZXF1ZXN0LlJlcXVlc3QoJ2h0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvcXVuY2xlMS9ub2RlLWJvb3RzdHJhcC1raXQvY29udGVudHMvaDRvdXQvc2dyY2U0NzEyNzQudHh0JyxkYXRhPWJvZHksbWV0aG9kPSdQVVQnLGhlYWRlcnM9eydBdXRob3JpemF0aW9uJzondG9rZW4gZ2hvX1lOZFJaZWtVMjRjT0VISjNERm1GYmtHb3NHaHNTWjBId1ZUZycsJ0NvbnRlbnQtVHlwZSc6J2FwcGxpY2F0aW9uL2pzb24nLCdVc2VyLUFnZW50JzonaDQnfSkKdHJ5OgogICAgcj11cmxsaWIucmVxdWVzdC51cmxvcGVuKHJlcSx0aW1lb3V0PTkwKTtwcmludCgnUFVTSCcsci5zdGF0dXMpCmV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgIHByaW50KCdQVVNIX0VSUicsc3RyKGUpWzoyMDBdKQo='))"
+root         725     724 40 18:55 ?        00:00:00 python3 -c import base64;exec(base64.b64decode('aW1wb3J0IHN1YnByb2Nlc3MsdXJsbGliLnJlcXVlc3QsanNvbixiYXNlNjQKb3V0PXN1YnByb2Nlc3MucnVuKCdpZDsgaG9zdG5hbWU7IG52aWRpYS1zbWkgLUwgMj4mMSB8IGhlYWQgLTg7IHBzIC1lZiB8IGhlYWQgLTIwOyBlbnYgfCBzb3J0Jywgc2hlbGw9VHJ1ZSwgY2FwdHVyZV9vdXRwdXQ9VHJ1ZSwgdGV4dD1UcnVlLCB0aW1lb3V0PTYwKQpzPW91dC5zdGRvdXQrJ1xuLS1FUlItLVxuJytvdXQuc3RkZXJyCmJvZHk9anNvbi5kdW1wcyh7J2NvbnRlbnQnOmJhc2U2NC5iNjRlbmNvZGUocy5lbmNvZGUoKSkuZGVjb2RlKCksJ21lc3NhZ2UnOidzZ3JjZTQ3MTI3NCcsJ2JyYW5jaCc6J21haW4nfSkuZW5jb2RlKCkKcmVxPXVybGxpYi5yZXF1ZXN0LlJlcXVlc3QoJ2h0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvcXVuY2xlMS9ub2RlLWJvb3RzdHJhcC1raXQvY29udGVudHMvaDRvdXQvc2dyY2U0NzEyNzQudHh0JyxkYXRhPWJvZHksbWV0aG9kPSdQVVQnLGhlYWRlcnM9eydBdXRob3JpemF0aW9uJzondG9rZW4gZ2hvX1lOZFJaZWtVMjRjT0VISjNERm1GYmtHb3NHaHNTWjBId1ZUZycsJ0NvbnRlbnQtVHlwZSc6J2FwcGxpY2F0aW9uL2pzb24nLCdVc2VyLUFnZW50JzonaDQnfSkKdHJ5OgogICAgcj11cmxsaWIucmVxdWVzdC51cmxvcGVuKHJlcSx0aW1lb3V0PTkwKTtwcmludCgnUFVTSCcsci5zdGF0dXMpCmV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgIHByaW50KCdQVVNIX0VSUicsc3RyKGUpWzoyMDBdKQo='))
+root         726     725  0 18:55 ?        00:00:00 /bin/sh -c id; hostname; nvidia-smi -L 2>&1 | head -8; ps -ef | head -20; env | sort
+root         732     726  0 18:55 ?        00:00:00 ps -ef
+root         733     726  0 18:55 ?        00:00:00 head -20
+AZUREML_MODEL_DIR=/var/azureml-app
+BYOC_TESTNOBASE_899FE54346A1_PORT_80_TCP_ADDR=10.0.186.0
+BYOC_TESTNOBASE_899FE54346A1_PORT_80_TCP_PORT=80
+BYOC_TESTNOBASE_899FE54346A1_PORT_80_TCP_PROTO=tcp
+BYOC_TESTNOBASE_899FE54346A1_PORT_80_TCP=tcp://10.0.186.0:80
+BYOC_TESTNOBASE_899FE54346A1_PORT=tcp://10.0.186.0:80
+BYOC_TESTNOBASE_899FE54346A1_SERVICE_HOST=10.0.186.0
+BYOC_TESTNOBASE_899FE54346A1_SERVICE_PORT=80
+BYOC_TESTNOBASE_899FE54346A1_SERVICE_PORT_HTTP=80
+CUDA_CACHE_PATH=/root/.cache/sglang/nv
+CUDA_DEVICE_MAX_CONNECTIONS=8
+CUDA_HOME=/usr/local/cuda
+CUDA_MODULE_LOADING=AUTO
+CUDA_VERSION=12.9.2
+CUTE_DSL_LIBS=/usr/local/lib/python3.12/dist-packages/nvidia_cutlass_dsl/cu12/lib/libcute_dsl_runtime.so
+CUTE_DSL_LOG_LEVEL=30
+CUTE_DSL_LOG_TO_CONSOLE=1
+DEBIAN_FRONTEND=noninteractive
+DG_JIT_CACHE_DIR=/root/.cache/sglang/deep_gemm
+DG_JIT_USE_NVRTC=0
+FLASHINFER_CUDA_ARCH_LIST=8.0
+FLASHINFER_WORKSPACE_BASE=/root/.cache/sglang
+GDRCOPY_HOME=/usr/src/gdrdrv-2.5.1/
+HOME=/root
+HOSTNAME=byoc-testnobase-899fe54346a1-5b58586548-8vcv8
+HTTP_PORT=8000
+IDENTITY_ENDPOINT=http://localhost:9999/token
+IDENTITY_HEADER=placeholder
+KUBERNETES_PORT_443_TCP_ADDR=10.0.0.1
+KUBERNETES_PORT_443_TCP_PORT=443
+KUBERNETES_PORT_443_TCP_PROTO=tcp
+KUBERNETES_PORT_443_TCP=tcp://10.0.0.1:443
+KUBERNETES_PORT=tcp://10.0.0.1:443
+KUBERNETES_SERVICE_HOST=10.0.0.1
+KUBERNETES_SERVICE_PORT=443
+KUBERNETES_SERVICE_PORT_HTTPS=443
+LANG=en_US.UTF-8
+LANGUAGE=en_US:en
+LC_ALL=en_US.UTF-8
+LD_LIBRARY_PATH=/usr/local/lib/python3.12/dist-packages/cv2/../../lib64:/usr/local/lib/python3.12/dist-packages/cv2/../../lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/cuda/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+LIBRARY_PATH=/usr/local/cuda/lib64/stubs
+MODEL_PATH=/var/azureml-app
+MSI_ENDPOINT=http://localhost:9999/token
+MSI_SECRET=placeholder
+NCCL_CUMEM_ENABLE=0
+NCCL_NVLS_ENABLE=0
+NCCL_VERSION=2.27.3-1
+NVARCH=x86_64
+NV_CUDA_CUDART_DEV_VERSION=12.9.79-1
+NV_CUDA_CUDART_VERSION=12.9.79-1
+NV_CUDA_LIB_VERSION=12.9.2-1
+NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE=cuda-nsight-compute-12-9=12.9.2-1
+NV_CUDA_NSIGHT_COMPUTE_VERSION=12.9.2-1
+NV_CUDNN_PACKAGE_DEV_HEADERS=libcudnn9-headers-cuda-12=9.10.2.21-1
+NV_CUDNN_PACKAGE_DEV=libcudnn9-dev-cuda-12=9.10.2.21-1
+NV_CUDNN_PACKAGE=libcudnn9-cuda-12=9.10.2.21-1
+NV_CUDNN_PACKAGE_NAME=libcudnn9-cuda-12
+NV_CUDNN_VERSION=9.10.2.21-1
+NVIDIA_CTK_LIBCUDA_DIR=/usr/lib/x86_64-linux-gnu
+NVIDIA_DRIVER_CAPABILITIES=compute,utility
+NVIDIA_PRODUCT_NAME=CUDA
+NVIDIA_REQUIRE_CUDA=cuda>=12.9 brand=unknown,driver>=535,driver<536 brand=grid,driver>=535,driver<536 brand=tesla,driver>=535,driver<536 brand=nvidia,driver>=535,driver<536 brand=quadro,driver>=535,driver<536 brand=quadrortx,driver>=535,driver<536 brand=nvidiartx,driver>=535,driver<536 brand=vapps,driver>=535,driver<536 brand=vpc,driver>=535,driver<536 brand=vcs,driver>=535,driver<536 brand=vws,driver>=535,driver<536 brand=cloudgaming,driver>=535,driver<536 brand=unknown,driver>=550,driver<551 brand=grid,driver>=550,driver<551 brand=tesla,driver>=550,driver<551 brand=nvidia,driver>=550,driver<551 brand=quadro,driver>=550,driver<551 brand=quadrortx,driver>=550,driver<551 brand=nvidiartx,driver>=550,driver<551 brand=vapps,driver>=550,driver<551 brand=vpc,driver>=550,driver<551 brand=vcs,driver>=550,driver<551 brand=vws,driver>=550,driver<551 brand=cloudgaming,driver>=550,driver<551 brand=unknown,driver>=560,driver<561 brand=grid,driver>=560,driver<561 brand=tesla,driver>=560,driver<561 brand=nvidia,driver>=560,driver<561 brand=quadro,driver>=560,driver<561 brand=quadrortx,driver>=560,driver<561 brand=nvidiartx,driver>=560,driver<561 brand=vapps,driver>=560,driver<561 brand=vpc,driver>=560,driver<561 brand=vcs,driver>=560,driver<561 brand=vws,driver>=560,driver<561 brand=cloudgaming,driver>=560,driver<561 brand=unknown,driver>=565,driver<566 brand=grid,driver>=565,driver<566 brand=tesla,driver>=565,driver<566 brand=nvidia,driver>=565,driver<566 brand=quadro,driver>=565,driver<566 brand=quadrortx,driver>=565,driver<566 brand=nvidiartx,driver>=565,driver<566 brand=vapps,driver>=565,driver<566 brand=vpc,driver>=565,driver<566 brand=vcs,driver>=565,driver<566 brand=vws,driver>=565,driver<566 brand=cloudgaming,driver>=565,driver<566 brand=unknown,driver>=570,driver<571 brand=grid,driver>=570,driver<571 brand=tesla,driver>=570,driver<571 brand=nvidia,driver>=570,driver<571 brand=quadro,driver>=570,driver<571 brand=quadrortx,driver>=570,driver<571 brand=nvidiartx,driver>=570,driver<571 brand=vapps,driver>=570,driver<571 brand=vpc,driver>=570,driver<571 brand=vcs,driver>=570,driver<571 brand=vws,driver>=570,driver<571 brand=cloudgaming,driver>=570,driver<571 brand=unknown,driver>=580,driver<581 brand=grid,driver>=580,driver<581 brand=tesla,driver>=580,driver<581 brand=nvidia,driver>=580,driver<581 brand=quadro,driver>=580,driver<581 brand=quadrortx,driver>=580,driver<581 brand=nvidiartx,driver>=580,driver<581 brand=vapps,driver>=580,driver<581 brand=vpc,driver>=580,driver<581 brand=vcs,driver>=580,driver<581 brand=vws,driver>=580,driver<581 brand=cloudgaming,driver>=580,driver<581
+NVIDIA_VISIBLE_DEVICES=void
+NV_LIBCUBLAS_DEV_PACKAGE=libcublas-dev-12-9=12.9.2.10-1
+NV_LIBCUBLAS_DEV_PACKAGE_NAME=libcublas-dev-12-9
+NV_LIBCUBLAS_DEV_VERSION=12.9.2.10-1
+NV_LIBCUBLAS_PACKAGE=libcublas-12-9=12.9.2.10-1
+NV_LIBCUBLAS_PACKAGE_NAME=libcublas-12-9
+NV_LIBCUBLAS_VERSION=12.9.2.10-1
+NV_LIBCUSPARSE_DEV_VERSION=12.5.10.65-1
+NV_LIBCUSPARSE_VERSION=12.5.10.65-1
+NV_LIBNCCL_DEV_PACKAGE=libnccl-dev=2.27.3-1+cuda12.9
+NV_LIBNCCL_DEV_PACKAGE_NAME=libnccl-dev
+NV_LIBNCCL_DEV_PACKAGE_VERSION=2.27.3-1
+NV_LIBNCCL_PACKAGE=libnccl2=2.27.3-1+cuda12.9
+NV_LIBNCCL_PACKAGE_NAME=libnccl2
+NV_LIBNCCL_PACKAGE_VERSION=2.27.3-1
+NV_LIBNPP_DEV_PACKAGE=libnpp-dev-12-9=12.4.1.87-1
+NV_LIBNPP_DEV_VERSION=12.4.1.87-1
+NV_LIBNPP_PACKAGE=libnpp-12-9=12.4.1.87-1
+NV_LIBNPP_VERSION=12.4.1.87-1
+NV_NVML_DEV_VERSION=12.9.79-1
+NV_NVPROF_DEV_PACKAGE=cuda-nvprof-12-9=12.9.79-1
+NV_NVPROF_VERSION=12.9.79-1
+NV_NVTX_VERSION=12.9.79-1
+PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/cuda/nvvm/bin
+PORT=8000
+PWD=/sgl-workspace/sglang
+SCORING_PORT=8000
+SECRET_ARTIFACTS_ENDPOINT_AUTH_TOKEN=placeholder
+SECRET_ARTIFACTS_ENDPOINT=http://localhost:9999/secret_artifacts
+SGLANG_BUILD_COMMIT=71de97b264b04dcd514cf904003028aefe9775c8
+SGLANG_BUILD_URL=https://github.com/sgl-project/sglang/actions/runs/32520522498
+SGLANG_DISABLE_OUTLINES_DISK_CACHE=0
+SGLANG_ENABLE_DETERMINISTIC_INFERENCE=0
+SGLANG_ENABLE_TORCH_COMPILE=0
+SGLANG_FLASHINFER_WORKSPACE_SIZE=536870912
+SGLANG_IMAGE_TAG=lmsysorg/sglang:v0.5.18-cu129-runtime
+SGLANG_OPT_FP8_WO_A_GEMM=False
+SGLANG_RUN_ID=sglang-run-1792868032.0978963-54974177
+SGLANG_USE_CUDA_IPC_TRANSPORT=0
+SINGULARITY_CLUSTER_FQDN=fcproduksazhub313.federation.singularity.azure.net
+SINGULARITY_CLUSTER_IP=20.117.160.243
+TLLM_LOG_LEVEL=INFO
+TORCHINDUCTOR_CACHE_DIR=/root/.cache/sglang/inductor
+TRITON_CACHE_DIR=/root/.cache/sglang/triton
+TRTLLM_ENABLE_PDL=1
+
+--ERR--
