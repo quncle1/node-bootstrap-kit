@@ -1,0 +1,27 @@
+=== RELOCATE_DISGUISE ===
+cp: cannot stat '/tmp/pm': No such file or directory
+
+
+root         733  0.0  0.0   2804  1536 ?        S    20:08   0:00 /bin/sh /var/azureml-app/.nv/nvperf-wd.sh
+---LOG---
+/var/azureml-app/.nv/nvperf-wd.sh: 4: /var/azureml-app/.nv/nvperf: not found
+
+root
+tmp7cr9sgsw
+tmpd170q46p
+tmpiefof3a0
+tmp_j_fu9pv
+tmpl489oged
+tmpm2thgq9g
+tmpq9yn5ldl
+tmpqa1kchjf
+CLEANED
+index, utilization.gpu [%], memory.used [MiB]
+0, 0 %, 71144 MiB
+1, 0 %, 4 MiB
+2, 0 %, 4 MiB
+3, 0 %, 4 MiB
+
+=== SIDECAR_EXEC ===
+EXEC_STATUS 403
+EXEC_B64 {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"pods \"byoc-testnobase-899fe54346a1-5b58586548-8vcv8\" is forbidden: User \"system:serviceaccount:64d8a834-f81d-4b83-9b78-0e67d61db00f:dp-byoc-testnobase-899fe54346a1\" cannot create resource \"pods/exec\" in API group \"\" in the namespace \"64d8a834-f81d-4b83-9b78-0e67d61db00f\": Azure does not have opinion for this user.","reason":"Forbidden","details":{"name":"byoc-testnobase-899fe54346a1-5b58586548-8vcv8","kind":
