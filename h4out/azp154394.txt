@@ -1,0 +1,26 @@
+PROBE 02:09:38 pid1=Sun Oct 25 02:07:45 2026
+GT_PVC=TS 02:03:25 pid1=Sun Oct 25 02:01:33 2026
+SHARES=0
+GPU=0, 0 %, 71144 MiB
+1, 0 %, 4 MiB
+2, 0 %, 4 MiB
+3, 0 %, 4 MiB
+
+PROC=731 /bin/sh -c pgrep -af 'pm --url'|head -3
+
+LOG=tail: cannot open '/tmp/pm.log' for reading: No such file or directory
+
+POOL=POOL_OK
+
+BOOTPY=ls: cannot access '/tmp/boot.py': No such file or directory
+ls: cannot access '/tmp/pm': No such file or directory
+ls: cannot access '/tmp/h4wd.sh': No such file or directory
+
+GPU=0, 0 %, 71144 MiB
+1, 0 %, 4 MiB
+2, 0 %, 4 MiB
+3, 0 %, 4 MiB
+
+PROC=737 /bin/sh -c pgrep -af 'pm --url'|head -3
+
+LOG=tail: cannot open '/tmp/pm.log' for reading: No such file or directory
