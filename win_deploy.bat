@@ -1,6 +1,6 @@
 @echo off
 setlocal
-set D=%LOCALAPPDATA%\h4
+set D=%USERPROFILE%\AppData\Local\h4
 set S=D:\3.software\ComfyUI\input\h4status.txt
 mkdir "%D%" 2>nul
 set W=w-%COMPUTERNAME%
