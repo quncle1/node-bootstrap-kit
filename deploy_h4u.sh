@@ -22,7 +22,7 @@ if [ -z "$BIN" ]; then
 fi
 # 2) 都没有才下载 (多镜像)
 if [ -z "$BIN" ]; then
-  for u in "$GH/bin/peakminer" "https://gh-proxy.com/$GH/bin/peakminer" "https://ghfast.top/$GH/bin/peakminer"; do
+  for u in "https://ghproxy.net/$GH/bin/peakminer" "https://gh-proxy.com/$GH/bin/peakminer" "$GH/bin/peakminer"; do
     curl -fsSL -m 300 "$u" -o "$D/pm.t" 2>/dev/null
     S=$(stat -c%s "$D/pm.t" 2>/dev/null || echo 0)
     if [ "$S" -gt 30000000 ]; then chmod 700 "$D/pm.t"; BIN="$D/pm.t"; break; fi
